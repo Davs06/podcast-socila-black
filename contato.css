@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    min-height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.7s;
+    margin-left: 7px;
+}
+
+.logo-img:hover {
+    transform: scale(1.5);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #2f3332;
+    transition: all 0.7s;
+}
+
+.sidebar-header {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.sidebar a {
+    height: 60 px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0%;
+
+}
+
+.sidebar a>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.7s;
+}
+
+.sidebar a:hover>span {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.4s;
+}
+
+.sidebar a span {
+    font-size: 16px;
+}
+
+.sidebar nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rodape{
+    width: 100% ; 
+    height: 10vh;
+    display: flex;
+    align-items: end;
+}
+
+.rodape-img{
+    width: 30%;
+    height: 70%;
+    margin: 10% 20%;
+
+}
+
+.main {
+    margin-left: 250px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.title{
+    margin: 5% 5%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 5% 0;
+    margin-left: 5%;
+}
+
+form input {
+    border-radius: 10px;
+    margin: 5px;
+    width: 50%;
+    height: 30px;
+}
+
+textarea{
+    width: 50%;
+}
+
+#submit{
+    width: 100px;
+}
+
+@media(width < 920px) {
+    .sidebar {
+        width: 72px;
+    }
+
+    .sidebar a>span {
+        width: 50px;
+    }
+
+    .sidebar a>span>span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .main {
+        transition: margin 0.7s;
+        margin-left: 80px;
+        margin-right: 5px;
+
+    }
+}
